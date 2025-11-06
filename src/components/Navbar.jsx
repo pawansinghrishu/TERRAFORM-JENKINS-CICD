@@ -1,16 +1,20 @@
-import { Stack } from "@mui/material";
-import { Link } from "react-router-dom";
+import React from 'react'
+import './NavBar.css'
+function NavBar() {
+  return (
+    <div className='nav'><img src="https://www.keralatv.in/media/2023/05/DisneyHotstar.png" alt="" />
+      
+        <div className='icons'>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-tv"></i>
+            <i class="fa-solid fa-film"></i>
+            <i class="fa-solid fa-bowling-ball"></i>
+            </div>
+        
+    </div>
+  )
+}
 
-import { logo } from "../utils/constants";
-import { SearchBar } from "./";
-
-const Navbar = () => (
-  <Stack direction="row" alignItems="center" p={2} sx={{ position:  "sticky", background: '#000', top: 0, justifyContent: "space-between" }}>
-    <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-      <img src={logo} alt="logo" height={45} />
-    </Link>
-    <SearchBar />
-  </Stack>
-);
-
-export default Navbar;
+export default NavBar
